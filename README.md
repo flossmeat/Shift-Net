@@ -31,14 +31,16 @@ python3 -m torch.distributed.launch --nproc_per_node=8 basicsr/train1.py -opt op
 python3 -m torch.distributed.launch --nproc_per_node=8 basicsr/train1.py -opt options/gopro-gshiftnet2.yml --launcher pytorch
 ```
  
+### Testing Flops:
+* ```python3 basicsr/models/archs/gshift1.py```
+* ```python3 basicsr/models/archs/gshift2.py``` 
+
 
 ### Testing: 
 * eval: We provide the pre-trained model for evaluation.
-* Please download the model [pretrained model](https://drive.google.com/file/d/13U0CEyl26GOnj1WM50SPCX5a5hf9FeYh/view?usp=sharing) to ./checkpoints/gshift_net_gopro.pth
+* Please download the model [pretrained model]() to ./checkpoints/gshift_net_gopro.pth
 * ```python3 test1.py ``` for base model.
 * ```python3 test2.py ``` for small model.
 
-### Test Flops:
-* ```python3 basicsr/models/archs/gshift1.py```
-* ```python3 basicsr/models/archs/gshift2.py```
+
 
