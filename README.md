@@ -20,6 +20,7 @@ python setup.py develop --no_cuda_ext
 * download [test set](https://drive.google.com/file/d/1zS9BmfLGNk8EFA6LkTWXQF6UKUnhvB_k/view?usp=sharing) to ./dataset/GOPRO/test/
 * download [train set](https://drive.google.com/file/d/1y4wvPdOG3mojpFCHTqLgriexhbjoWVkK/view?usp=sharing) to ./dataset/GOPRO/train/
 
+
 ### Training:
 
 * training script for base model:
@@ -38,9 +39,6 @@ python3 -m torch.distributed.launch --nproc_per_node=8 basicsr/train1.py -opt op
 
 ### Testing: 
 * eval: We provide the pre-trained model for evaluation.
-* Please download the model [pretrained model]() to ./checkpoints/gshift_net_gopro.pth
+* Please download the model [base version](https://drive.google.com/file/d/1gX_ZNlRZe8e9V91mo1Xd7mhmqKJKOo-h/view?usp=share_link) to ./checkpoints/shiftnet.pth and download the model [small version](https://drive.google.com/file/d/1Am45Fnyieu2g-NM1f6V6ZjbJM0-_Bcpg/view?usp=share_link) to ./checkpoints/shiftnet_small.pth
 * ```python3 test1.py ``` for base model.
 * ```python3 test2.py ``` for small model.
-
-
-
